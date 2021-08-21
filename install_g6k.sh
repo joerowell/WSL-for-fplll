@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+# Change this to set the number of cores you're willing to use for make activities
+jobs=4
+
+
 ## Step #1: Check that we have git installed
 if ! command -v git &> /dev/null
 then
@@ -19,6 +24,7 @@ fi
 
 ## For some reason python doesn't come automatically aliased on Ubuntu?
 alias python=python3
+
 ## Warning: this will nuke your existing mamba installation.
 ## Some people won't have this, and that's OK, but make sure you actively read this before
 ## you run it!
@@ -46,7 +52,7 @@ git clone https://github.com/fplll/fplll
 cd fplll
 autoreconf -i
 ./configure --prefix=$SAGE_LOCAL --disable-static
-make install
+make install -j ${jobs}
 cd ..
 
 git clone https://github.com/fplll/fpylll
@@ -61,7 +67,7 @@ git clone https://github.com/fplll/g6k
 cd g6k
 autoreconf -i
 ./configure --prefix=$SAGE_LOCAL --disable-static
-make
+make -j ${jobs}
 pip install -r requirements.txt
 ./rebuild.sh
 python setup.py build
