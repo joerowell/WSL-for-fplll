@@ -12,8 +12,8 @@ jobs:
     - name: Run and test
       run: |
            git clone https://github.com/joerowell/WSL-for-fplll.git
-	   cd WSL-for-fplll
-	   chmod +x install_g6k.sh
-	   ./install_g6k
-	   cd g6k
-	   ./full_sieve.py 60
+           cd WSL-for-fplll
+           chmod +x install_g6k.sh
+           ./install_g6k
+           cd g6k
+           ./full_sieve.py 60
