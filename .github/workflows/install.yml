@@ -14,6 +14,6 @@ jobs:
            git clone https://github.com/joerowell/WSL-for-fplll.git
            cd WSL-for-fplll
            chmod +x install_g6k.sh
-           ./install_g6k
+           ./install_g6k.sh
            cd g6k
            ./full_sieve.py 60
