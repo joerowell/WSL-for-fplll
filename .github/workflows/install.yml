@@ -15,8 +15,7 @@ jobs:
            cd WSL-for-fplll
            chmod +x install_g6k.sh
            ./install_g6k.sh
-           conda init bash
-           source ~/.bashrc
+           exec bash
            conda activate g6k
            cd g6k
            ./full_sieve.py 60
