@@ -16,6 +16,6 @@ jobs:
            chmod +x install_g6k.sh
            ./install_g6k.sh
            conda init bash
-	   conda activate g6k
+           conda activate g6k
            cd g6k
            ./full_sieve.py 60
