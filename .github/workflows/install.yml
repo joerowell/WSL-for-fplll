@@ -15,6 +15,3 @@ jobs:
            cd WSL-for-fplll
            chmod +x install_g6k.sh
            ./install_g6k.sh
-           mamba activate g6k
-           cd g6k
-           ./full_sieve.py 60 --verbose
