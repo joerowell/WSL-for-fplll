@@ -69,8 +69,7 @@ autoreconf -i
 ./configure --prefix=$SAGE_LOCAL --disable-static
 make -j ${jobs}
 pip install -r requirements.txt
-./rebuild.sh
-python setup.py build
+python setup.py build_ext --inplace
 python setup.py -q install 
 cd ..
 

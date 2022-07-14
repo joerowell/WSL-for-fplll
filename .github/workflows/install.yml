@@ -13,5 +13,9 @@ jobs:
       run: |
            git clone https://github.com/joerowell/WSL-for-fplll.git
            cd WSL-for-fplll
-           chmod +x install_g6k.sh
-           ./install_g6k.sh
+           cat install_g6k.sh &> install_g6k_run.sh
+           echo "cd g6k" >> install_g6k_run.sh
+           echo "mamba activate g6k" >> install_g6k_run.sh
+           echo "./full_sieve.py 60 --verbose" >> install_g6k_run.sh
+           chmod +x install_g6k_run.sh
+           ./install_g6k_run.sh
