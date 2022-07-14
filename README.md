@@ -5,7 +5,7 @@ This repository is designed to make it easy to install Sagemath, fplll, fpylll a
 The raison d'etre here is that Sagemath must be installed inside WSL if 
 you want to use conda to maintain the dependencies [1].
 
-Please note that this script is known to work as of the 11th August 2021. If this script has not been updated in a while, then there is a good chance that it does not work. 
+Please note that whilst this script is tested weekly (via Github actions) it may be the case that the script _only_ works on Github actions. As a result, we offer this script without any guarantees.
 
 ## High-level:
 The high-level flow behind these instructions are as follows:
